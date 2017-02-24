@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esriUI="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
+             xmlns:local="clr-namespace:UsarMapasBase.Shared;assembly=UsarMapasBase"
+             xmlns:vm="clr-namespace:UsarMapasBase.ViewModels;assembly=UsarMapasBase"
+             xmlns:b="clr-namespace:UsarMapasBase.Behaviors;assembly=UsarMapasBase"
+             x:Class="UsarMapasBase.Views.MapPage">
+  <ContentPage.BindingContext>
+    <vm:MapPageViewModel />
+  </ContentPage.BindingContext>
+  <ContentPage.Resources>
+  </ContentPage.Resources>
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition Height="70" />
+    </Grid.RowDefinitions>
+    <esriUI:MapView Map="{Binding Path=Map}" Grid.Row="0"/>
+    <ListView x:Name="BaseMapListView"
+              ItemsSource="{Binding Path=BasemapChoices}"
+              Grid.Row ="0"
+              IsVisible="{Binding Path=IsBasemapsListVisible}">
+      <ListView.Behaviors>
+        <b:ListViewItemTappedBehavoir Command="{Binding Path=ChangeBaseMapCommand}"/>
+      </ListView.Behaviors>
+      <ListView.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color"
+                    Android="Black"
+                    WinPhone="#6FFFFFFF" />
+      </ListView.BackgroundColor>
+      <ListView.Margin>
+        <OnPlatform x:TypeArguments="Thickness" 
+                    WinPhone="25" />
+      </ListView.Margin>
+    </ListView>
+    <Button x:Name="BasemapsButton"
+            Command="{Binding Path=BaseMapCommand}"
+            Grid.Row="1"
+            Margin="5,2"
+            Text="Mapas Base" />
+  </Grid>
+
+</ContentPage>
