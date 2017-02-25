@@ -14,7 +14,9 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		UsarMapasBase\UsarMapasBase.Shared\UsarMapasBase.Shared.projitems*{0871f29d-8007-4284-b327-d723aca8bb0f}*SharedItemsImports = 4
+		UsarMapasBase\UsarMapasBase.Shared\UsarMapasBase.Shared.projitems*{32b247c3-03bc-4d41-8331-576a3fe56aae}*SharedItemsImports = 4
 		UsarMapasBase\UsarMapasBase.Shared\UsarMapasBase.Shared.projitems*{6d85c324-ef2a-474c-b198-d15a024ffde8}*SharedItemsImports = 13
+		UsarMapasBase\UsarMapasBase.Shared\UsarMapasBase.Shared.projitems*{cd221f32-c808-443e-ad8c-3f821e66c222}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
