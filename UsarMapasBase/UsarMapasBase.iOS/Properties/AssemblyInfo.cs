@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using UsarMapasBase.Shared;
+using UsarMapasBase;
 using Foundation;
 using Esri.ArcGISRuntime.Xamarin.Forms;
 
@@ -40,4 +40,4 @@ using Esri.ArcGISRuntime.Xamarin.Forms;
 
 // Prevent linker from excluding required types from app package
 [assembly: Preserve(typeof(MapView), AllMembers = true)]
-[assembly: Preserve(typeof(MapViewModel), AllMembers = true)]
+[assembly: Preserve(typeof(UsarMapasBase.ViewModels.MapPageViewModel), AllMembers = true)]
